@@ -1,0 +1,165 @@
+﻿<UserControl
+    x:Class="Eutyches.Spell.Lexedit.Views.Controls.StemInfoView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:hunspell="clr-namespace:Eutyches.Spell.Hunspell;assembly=Eutyches.Spell.Hunspell"
+    xmlns:local="clr-namespace:Eutyches.Spell.Lexedit.Views.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:spell="clr-namespace:Eutyches.Spell;assembly=Eutyches.Spell"
+    xmlns:uc="clr-namespace:Eutyches.Spell.Lexedit.UserControls"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <GroupBox>
+        <GroupBox.Header>
+            <MultiBinding Converter="{StaticResource HeaderConverter}" UpdateSourceTrigger="PropertyChanged">
+                <Binding FallbackValue="true" Path="HasChanges" />
+                <Binding FallbackValue="STEM_ID" Path="Id" />
+            </MultiBinding>
+        </GroupBox.Header>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <!--  Form  -->
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Content="Form:" />
+            <TextBox
+                Grid.Row="0"
+                Grid.Column="1"
+                Text="{Binding Path=Form, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+            <!--  Category  -->
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Content="Category:" />
+            <ComboBox
+                Grid.Row="1"
+                Grid.Column="1"
+                ItemsSource="{Binding Source={spell:EnumBindingSource {x:Type hunspell:Category}}}"
+                SelectedValue="{Binding Path=Category}" />
+            <!--  Sense  -->
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Content="Sense:" />
+            <TextBox
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="{Binding Path=Sense, UpdateSourceTrigger=PropertyChanged}" />
+            <!--  Comments  -->
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                VerticalAlignment="Top"
+                Content="Comments:" />
+            <TextBox
+                Grid.Row="3"
+                Grid.Column="1"
+                Height="Auto"
+                AcceptsReturn="True"
+                AcceptsTab="True"
+                SpellCheck.IsEnabled="True"
+                Text="{Binding Comments, UpdateSourceTrigger=PropertyChanged}"
+                TextWrapping="Wrap" />
+            <!--  Root and Base Stems  -->
+            <Grid Grid.Row="4" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <GroupBox Grid.Column="0" Header="Root and Derivatives">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <!--  Summary  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Content="Stem:" />
+                        <uc:StemSummaryView
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            DataContext="{Binding Path=Root}" />
+                        <!--  Referrers  -->
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Content="Derivatives:" />
+                        <TextBlock
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="{Binding Path=RootCount, Mode=OneWay, FallbackValue=0}" />
+                        <!--  Buttons  -->
+                        <StackPanel
+                            Grid.Row="2"
+                            Grid.ColumnSpan="2"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+                            <Button Command="{Binding Path=GoToRootCommand}" Content="_Go to" />
+                            <Button Command="{Binding Path=EditRootCommand}" Content="_Edit..." />
+                        </StackPanel>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Column="1" Header="Base and Derivatives">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <!--  Summary  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Content="Stem:" />
+                        <uc:StemSummaryView
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            DataContext="{Binding Path=Base}" />
+                        <!--  Referrers  -->
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Content="Derivatives:" />
+                        <TextBlock
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="{Binding Path=BaseCount, Mode=OneWay, FallbackValue=0}" />
+                        <!--  Buttons  -->
+                        <StackPanel
+                            Grid.Row="2"
+                            Grid.ColumnSpan="2"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+                            <Button Command="{Binding Path=GoToBaseCommand}" Content="Go _to" />
+                            <Button Command="{Binding Path=EditBaseCommand}" Content="E_dit..." />
+                        </StackPanel>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+        </Grid>
+    </GroupBox>
+</UserControl>

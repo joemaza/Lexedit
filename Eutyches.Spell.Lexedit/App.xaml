@@ -1,0 +1,15 @@
+﻿<prism:PrismApplication
+    x:Class="Eutyches.Spell.Lexedit.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:prism="http://prismlibrary.com/"
+    DispatcherUnhandledException="PrismApplication_DispatcherUnhandledException">
+    <prism:PrismApplication.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="AppStyle.xaml" />
+                <ResourceDictionary Source="/Eutyches.Spell.Lexedit;component/Converters/Converters.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </prism:PrismApplication.Resources>
+</prism:PrismApplication>

@@ -1,0 +1,77 @@
+﻿<UserControl
+    x:Class="Eutyches.Spell.Lexedit.Views.Controls.GeneralOptionsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Eutyches.Spell.Lexedit.Views.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignWidth="300"
+    mc:Ignorable="d">
+    <GroupBox Header="General Options">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <CheckBox
+                Grid.Row="0"
+                Grid.Column="0"
+                Content="Needs Affixation"
+                IsChecked="{Binding Path=IsNeedAffixSet, UpdateSourceTrigger=PropertyChanged}"
+                IsEnabled="{Binding Path=IsNeedAffixDefined}"
+                ToolTip="NEEDAFFIX" />
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="1"
+                FontFamily="Courier New"
+                Text="{Binding Path=NeedAffixFlag, StringFormat='[{0}]', FallbackValue='[--]', TargetNullValue='[--]'}" />
+
+            <CheckBox
+                Grid.Row="1"
+                Grid.Column="0"
+                Content="Case Sensitive"
+                IsChecked="{Binding Path=IsKeepCaseSet, UpdateSourceTrigger=PropertyChanged}"
+                IsEnabled="{Binding Path=IsKeepCaseDefined}"
+                ToolTip="KEEPCASE" />
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="1"
+                FontFamily="Courier New"
+                Text="{Binding Path=KeepCaseFlag, StringFormat='[{0}]', FallbackValue=[--], TargetNullValue='[--]'}" />
+
+            <CheckBox
+                Grid.Row="2"
+                Grid.Column="0"
+                Content="Substandard Form"
+                IsChecked="{Binding Path=IsSubstandardSet, UpdateSourceTrigger=PropertyChanged}"
+                IsEnabled="{Binding Path=IsSubstandardDefined}"
+                ToolTip="SUBSTANDARD" />
+            <TextBlock
+                Grid.Row="2"
+                Grid.Column="1"
+                FontFamily="Courier New"
+                Text="{Binding Path=SubstandardFlag, StringFormat='[{0}]', FallbackValue=[--], TargetNullValue='[--]'}" />
+
+            <CheckBox
+                Grid.Row="3"
+                Grid.Column="0"
+                Content="Forbidden Form"
+                IsChecked="{Binding Path=IsForbiddenWordSet, UpdateSourceTrigger=PropertyChanged}"
+                IsEnabled="{Binding Path=IsForbiddenWordDefined}"
+                ToolTip="FORBIDDENWORD" />
+            <TextBlock
+                Grid.Row="3"
+                Grid.Column="1"
+                FontFamily="Courier New"
+                Text="{Binding Path=ForbiddenWordFlag, StringFormat='[{0}]', FallbackValue=[--], TargetNullValue='[--]'}" />
+        </Grid>
+    </GroupBox>
+</UserControl>

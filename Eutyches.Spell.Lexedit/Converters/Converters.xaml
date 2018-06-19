@@ -1,0 +1,13 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Eutyches.Spell.Lexedit.Converters"
+    xmlns:spell="clr-namespace:Eutyches.Spell;assembly=Eutyches.Spell">
+    <!--  Converters  -->
+    <local:HeaderConverter x:Key="HeaderConverter" />
+    <local:TitleConverter x:Key="TitleConverter" />
+    <local:FirstLetterConverter x:Key="FirstLetterConverter" />
+    <local:PercentageConverter x:Key="PercentageConverter" />
+    <local:ListToStringConverter x:Key="ListToStringConverter" />
+    <spell:EnumBindingSource x:Key="EnumBindingSource" />
+</ResourceDictionary>

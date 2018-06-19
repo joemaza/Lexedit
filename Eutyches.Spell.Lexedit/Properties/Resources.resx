@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NewFileName" xml:space="preserve">
+    <value>[new lexicon]</value>
+  </data>
+  <data name="AffixFileExtension" xml:space="preserve">
+    <value>aff</value>
+    <comment>The three-letter extension for Hunspell affix files</comment>
+  </data>
+  <data name="AffixFileFilter" xml:space="preserve">
+    <value>Hunspell Affix File (*.aff)|*.aff|All Files (*.*)|*.*</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CloseLexiconFileDialogTitle" xml:space="preserve">
+    <value>Close Lexicon File</value>
+  </data>
+  <data name="DictionaryFileExtension" xml:space="preserve">
+    <value>dic</value>
+    <comment>The three-letter extension for Hunspell dictionary files</comment>
+  </data>
+  <data name="DictionaryFileFilter" xml:space="preserve">
+    <value>Hunspell Dictionary File (*.dic)|*.aff|All Files (*.*)|*.*</value>
+  </data>
+  <data name="ErrorDialogMessageFormat" xml:space="preserve">
+    <value>An error occured during the operation: {0}.</value>
+  </data>
+  <data name="ErrorDialogTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ExportAffixFileDialogTitle" xml:space="preserve">
+    <value>Export Hunspell Affix File</value>
+  </data>
+  <data name="ExportDictionaryFileDialogTitle" xml:space="preserve">
+    <value>Export Hunspell Dictionary File</value>
+  </data>
+  <data name="ExportStemsFileDialogTitle" xml:space="preserve">
+    <value>Export Stems</value>
+  </data>
+  <data name="ImportErrorsDefaultFileName" xml:space="preserve">
+    <value>ImportErrors.tgx</value>
+  </data>
+  <data name="ImportStemsFileDialogTitle" xml:space="preserve">
+    <value>Import Stems</value>
+  </data>
+  <data name="ImportWarningsDefaultFileName" xml:space="preserve">
+    <value>ImportWarnings.tgx</value>
+  </data>
+  <data name="LexiconFileDefaultExtension" xml:space="preserve">
+    <value>lex</value>
+  </data>
+  <data name="LexiconFileFilter" xml:space="preserve">
+    <value>Lexica (*.lex, *.zlex)|*.lex;*.zlex|All Files (*.*)|*.*</value>
+  </data>
+  <data name="NoButton" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="OKButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OpenLexiconFileDialogTitle" xml:space="preserve">
+    <value>Open Lexicon File</value>
+  </data>
+  <data name="OpenTaggedStemFileDialogTitle" xml:space="preserve">
+    <value>Open Tagged Stem File</value>
+  </data>
+  <data name="SaveLexiconFileDialogTitle" xml:space="preserve">
+    <value>Save Lexicon File</value>
+  </data>
+  <data name="TaggedStemFileDefaultExtension" xml:space="preserve">
+    <value>tgx</value>
+  </data>
+  <data name="TaggedStemFileFilter" xml:space="preserve">
+    <value>Tagged Stems (*.tgx, *.txt)|*.tgx;*.txt|All Files (*.*)|*.*</value>
+  </data>
+  <data name="WarningDialogTitle" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="YesButton" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="CloseLexiconFileDialogAffirmative" xml:space="preserve">
+    <value>Save lexicon</value>
+  </data>
+  <data name="CloseLexiconFileDialogNegative" xml:space="preserve">
+    <value>Close anyway</value>
+  </data>
+  <data name="CloseLexiconFileDialogQuestion" xml:space="preserve">
+    <value>Do you want to save the lexicon?</value>
+  </data>
+  <data name="CloseLexiconFileDialogExtra" xml:space="preserve">
+    <value>Changes have not been saved.</value>
+  </data>
+  <data name="AppTitle" xml:space="preserve">
+    <value>Lexedit</value>
+  </data>
+  <data name="StatusLexiconOpenedFormat" xml:space="preserve">
+    <value>Opened lexicon {0}</value>
+  </data>
+  <data name="StatusLexiconSavedFormat" xml:space="preserve">
+    <value>Saved lexicon {0}</value>
+  </data>
+  <data name="ErrorUnhandledException" xml:space="preserve">
+    <value>An unhandled exception ocurred.</value>
+  </data>
+  <data name="ImportAffixesFileDialogTitle" xml:space="preserve">
+    <value>Import Affixes</value>
+  </data>
+  <data name="StatusLexiconClosed" xml:space="preserve">
+    <value>Closed lexicon</value>
+  </data>
+  <data name="StatusLexiconCreated" xml:space="preserve">
+    <value>New lexicon created</value>
+  </data>
+  <data name="StatusLexiconDataChangedFormat" xml:space="preserve">
+    <value>Changed lexicon {0}</value>
+  </data>
+  <data name="StatusLexiconError" xml:space="preserve">
+    <value>An error occurred</value>
+  </data>
+  <data name="StatusReady" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="ErrorStemFormContainsWhiteSpace" xml:space="preserve">
+    <value>Form cannot contain whitespace.</value>
+  </data>
+  <data name="ErrorStemFormEmpty" xml:space="preserve">
+    <value>Form cannot be empty, whitespace or the default string (e.g., "0").</value>
+  </data>
+  <data name="ErrorReferrer" xml:space="preserve">
+    <value>An error occurred</value>
+  </data>
+  <data name="NewItem" xml:space="preserve">
+    <value>[new item]</value>
+  </data>
+  <data name="ErrorStemDuplicates" xml:space="preserve">
+    <value>Error: Duplicates found!</value>
+  </data>
+  <data name="ErrorStemNotFound" xml:space="preserve">
+    <value>Error: Stem not found!</value>
+  </data>
+  <data name="ExitAppDialogAffirmative" xml:space="preserve">
+    <value>Save lexicon</value>
+  </data>
+  <data name="ExitAppDialogExtra" xml:space="preserve">
+    <value>Changes to the lexicon have not been saved.</value>
+  </data>
+  <data name="ExitAppDialogNegative" xml:space="preserve">
+    <value>Exit anyway</value>
+  </data>
+  <data name="ExitAppDialogQuestion" xml:space="preserve">
+    <value>Save the lexicon before exiting?</value>
+  </data>
+  <data name="ExitAppDialogTitle" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="RemoveStemDialogAffirmative" xml:space="preserve">
+    <value>Remove stem</value>
+  </data>
+  <data name="RemoveStemDialogExtraHasRelations" xml:space="preserve">
+    <value>This stem has derivatives. The following number of stems will be affected:</value>
+  </data>
+  <data name="RemoveStemDialogExtraNoRelations" xml:space="preserve">
+    <value>This stem has no derivatives. It might be OK to remove.</value>
+  </data>
+  <data name="RemoveStemDialogNegative" xml:space="preserve">
+    <value>Do not remove</value>
+  </data>
+  <data name="RemoveStemDialogQuestionFormat2" xml:space="preserve">
+    <value>Remove this stem: {0} ({1})?</value>
+  </data>
+  <data name="RemoveStemDialogRelationCountFormat" xml:space="preserve">
+    <value>- Referring as Root: {0}
+- Referring as Base: {1}</value>
+  </data>
+  <data name="RemoveStemDialogTitle" xml:space="preserve">
+    <value>Remove Stem</value>
+  </data>
+  <data name="RemoveStemDialogCaution" xml:space="preserve">
+    <value>Once the stem is removed, all affected stems will be updated and their references will be deleted. Remove it only if these relationships are no longer valid.</value>
+  </data>
+  <data name="MoveCurrentItemDialogAffirmative" xml:space="preserve">
+    <value>Save item</value>
+  </data>
+  <data name="MoveCurrentItemDialogNegative" xml:space="preserve">
+    <value>Undo changes</value>
+  </data>
+  <data name="MoveCurrentItemDialogOperation" xml:space="preserve">
+    <value>Changes to the current item have not been saved.</value>
+  </data>
+  <data name="MoveCurrentItemDialogQuestion" xml:space="preserve">
+    <value>Save changes before moving to another item?</value>
+  </data>
+  <data name="MoveCurrentItemDialogTitle" xml:space="preserve">
+    <value>Move Current Item</value>
+  </data>
+  <data name="StemRelationsToolWindowBaseMode" xml:space="preserve">
+    <value>Base</value>
+  </data>
+  <data name="StemRelationsToolWindowRootMode" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="StemRelationsToolWindowTitle" xml:space="preserve">
+    <value>Stem Associations</value>
+  </data>
+</root>

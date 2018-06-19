@@ -1,0 +1,47 @@
+﻿<UserControl
+    x:Class="Eutyches.Spell.Lexedit.Views.Details.StemDetailsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:uc="clr-namespace:Eutyches.Spell.Lexedit.Views.Controls"
+    d:DesignHeight="600"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <!--  Get resources first before using the converters  -->
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Eutyches.Spell.Lexedit;component/Converters/Converters.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <!--  Main information  -->
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="0.5*" />
+            </Grid.RowDefinitions>
+            <!--  Main Information  -->
+            <uc:StemInfoView Grid.Row="0" />
+            <!--  Affixes  -->
+            <uc:StemAffixesView Grid.Row="1" />
+        </Grid>
+        <!--  Options  -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <uc:GeneralOptionsView Grid.Row="0" />
+            <uc:SuggestionOptionsView Grid.Row="1" />
+            <uc:CompoundingOptionsView Grid.Row="2" />
+        </Grid>
+    </Grid>
+</UserControl>

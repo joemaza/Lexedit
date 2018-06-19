@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.ViewModelBase" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgIAAACAIAAMEAAEIAAAAAAAAgQAAQAQgAAAgAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.MasterViewModelBase&lt;TDetailsViewModel&gt;" Collapsed="true">
+    <Position X="2" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEgAAtBSCMKSCEEICKAgVAQQQREwggCQEFQgAgEAAAA=</HashCode>
+      <FileName>ViewModels\MasterViewModelBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.Details.DetailsViewModelBase&lt;TItem&gt;" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Details\DetailsViewModelBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.StemMasterViewModel" Collapsed="true">
+    <Position X="0.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAIAAAAIAIAAQAAAAAAAggAAAEAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\StemMasterViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.MainWindowViewModel" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UEAZAAAAAgCAAUQTAABCUkACEFAQDghEAwBQBgUEAAo=</HashCode>
+      <FileName>ViewModels\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.AffixMasterViewModel" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAgAAAAAAAEAAAIAAAAAAAAAQAgAAAgAAAgAAAAA=</HashCode>
+      <FileName>ViewModels\AffixMasterViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.Details.AffixDetailsViewModel" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Details\AffixDetailsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.Details.RuleDetailsViewModel" Collapsed="true">
+    <Position X="12" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Details\RuleDetailsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.Details.StemDetailsViewModel" Collapsed="true">
+    <Position X="9.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BACGAAAAEAAAAiAQIEBAAAAAgAMAAAAAjAAAYAQASAA=</HashCode>
+      <FileName>ViewModels\Details\StemDetailsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.EditableViewModelBase&lt;TData&gt;" Collapsed="true">
+    <Position X="15.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAACABAAQABAAAAAAAAAAEQABCIAAAEAAAhAAA=</HashCode>
+      <FileName>ViewModels\EditableViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.Details.MorphemeViewModelBase&lt;TMorpheme&gt;" Collapsed="true">
+    <Position X="11" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAgwgBKIBoqRoFgASBYBABAIAAEEUCSYMCATioFA5Bk=</HashCode>
+      <FileName>ViewModels\Details\MorphemeDetailsViewModelBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.Options.OptionViewModelBase&lt;TOption&gt;" Collapsed="true">
+    <Position X="18.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Options\OptionsViewModelBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.Options.SuggestionOptionsViewModel" Collapsed="true">
+    <Position X="14.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Options\SuggestionOptionsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.Options.GeneralOptionsViewModel" Collapsed="true">
+    <Position X="18.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Options\GeneralOptionsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.Options.FileMetaViewModel" Collapsed="true">
+    <Position X="23.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Options\FileMetaViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.Options.ConversionOptionsViewModel" Collapsed="true">
+    <Position X="16.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Options\ConversionOptionsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Eutyches.Spell.Lexedit.ViewModels.Options.CompoundingOptionsViewModel" Collapsed="true">
+    <Position X="21" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Options\CompoundingOptionsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Eutyches.Spell.Lexedit.ViewModels.IEditableData&lt;TData&gt;">
+    <Position X="1.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IEditableData.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

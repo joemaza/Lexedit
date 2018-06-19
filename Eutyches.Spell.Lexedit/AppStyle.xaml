@@ -1,0 +1,140 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--
+        Error adornment base on https://blogs.msdn.microsoft.com/bethmassi/2008/06/27/displaying-data-validation-messages-in-wpf/
+    -->
+    <Storyboard x:Key="FlashErrorIcon">
+        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetProperty="(UIElement.Visibility)">
+            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}" />
+            <DiscreteObjectKeyFrame KeyTime="00:00:00.2000000" Value="{x:Static Visibility.Visible}" />
+            <DiscreteObjectKeyFrame KeyTime="00:00:00.4000000" Value="{x:Static Visibility.Hidden}" />
+            <DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="{x:Static Visibility.Visible}" />
+            <DiscreteObjectKeyFrame KeyTime="00:00:00.8000000" Value="{x:Static Visibility.Hidden}" />
+            <DiscreteObjectKeyFrame KeyTime="00:00:01" Value="{x:Static Visibility.Visible}" />
+        </ObjectAnimationUsingKeyFrames>
+    </Storyboard>
+    <Style x:Key="ErrorTemplate" TargetType="Control">
+        <Setter Property="Validation.ErrorTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <DockPanel LastChildFill="True">
+                        <Ellipse
+                            Width="15"
+                            Height="15"
+                            Margin="-25,0,0,0"
+                            DockPanel.Dock="Right"
+                            Fill="Red"
+                            StrokeThickness="1"
+                            ToolTip="{Binding ElementName=myControl, Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
+                            <Ellipse.Stroke>
+                                <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                                    <GradientStop Offset="0" Color="#FFFA0404" />
+                                    <GradientStop Offset="1" Color="#FFC9C7C7" />
+                                </LinearGradientBrush>
+                            </Ellipse.Stroke>
+                            <Ellipse.Triggers>
+                                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                                    <BeginStoryboard Storyboard="{StaticResource FlashErrorIcon}" />
+                                </EventTrigger>
+                            </Ellipse.Triggers>
+                        </Ellipse>
+
+                        <TextBlock
+                            Margin="-15,5,0,0"
+                            DockPanel.Dock="Right"
+                            FontSize="11pt"
+                            FontWeight="Bold"
+                            Foreground="White"
+                            ToolTip="{Binding ElementName=myControl, Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
+                            !
+                            <TextBlock.Triggers>
+                                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                                    <BeginStoryboard Storyboard="{StaticResource FlashErrorIcon}" />
+                                </EventTrigger>
+                            </TextBlock.Triggers>
+                        </TextBlock>
+                        <Border BorderBrush="Red" BorderThickness="1">
+                            <AdornedElementPlaceholder Name="myControl" />
+                        </Border>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="Validation.HasError" Value="true">
+                <Setter Property="ToolTip" Value="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=(Validation.Errors)[0].ErrorContent}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--  Toolbar Styles  -->
+    <Style x:Key="{x:Static ToolBar.ButtonStyleKey}" TargetType="Button">
+        <Setter Property="MinWidth" Value="56" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style x:Key="{x:Static ToolBar.MenuStyleKey}" TargetType="Menu">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style x:Key="{x:Static ToolBar.TextBoxStyleKey}" TargetType="TextBox">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Width" Value="200" />
+    </Style>
+
+    <!--  Label  -->
+    <Style TargetType="{x:Type Label}">
+        <Setter Property="FontWeight" Value="DemiBold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Right" />
+    </Style>
+
+    <!--  Button  -->
+    <Style TargetType="{x:Type Button}">
+        <Setter Property="Height" Value="23" />
+        <Setter Property="MinWidth" Value="75" />
+        <Setter Property="Margin" Value="3.5,7,3.5,7" />
+        <Setter Property="Padding" Value="3" />
+    </Style>
+
+    <!--  TextBox  -->
+    <Style BasedOn="{StaticResource ErrorTemplate}" TargetType="{x:Type TextBox}">
+        <Setter Property="Height" Value="23" />
+        <Setter Property="Margin" Value="3.5,7,3.5,7" />
+    </Style>
+
+    <!--  TextBlock  -->
+    <Style TargetType="{x:Type TextBlock}">
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+    <!--  ComboBox  -->
+    <Style BasedOn="{StaticResource ErrorTemplate}" TargetType="{x:Type ComboBox}">
+        <Setter Property="Height" Value="23" />
+        <Setter Property="Margin" Value="3.5,7,3.5,7" />
+    </Style>
+
+    <!--  CheckBox  -->
+    <Style BasedOn="{StaticResource ErrorTemplate}" TargetType="{x:Type CheckBox}">
+        <Setter Property="Margin" Value="3.5,7,3.5,7" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+    <!--  RadioButton  -->
+    <Style TargetType="{x:Type RadioButton}">
+        <Setter Property="Margin" Value="3.5,7,3.5,7" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+    <!--  GroupBox  -->
+    <Style TargetType="{x:Type GroupBox}">
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock FontWeight="DemiBold" Text="{Binding}" />
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

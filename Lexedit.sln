@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eutyches.Spell", "Eutyches.Spell\Eutyches.Spell.csproj", "{79675CD7-CBCF-4FE5-A054-E2168EAFE8D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eutyches.Spell.Hunspell", "Eutyches.Spell.Hunspell\Eutyches.Spell.Hunspell.csproj", "{0A88EE3F-BFAA-4FFB-BC11-8B9CC9A7BB23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eutyches.Spell.Lexedit", "Eutyches.Spell.Lexedit\Eutyches.Spell.Lexedit.csproj", "{81A98690-64AD-4EA7-81F9-B2385C7FEE5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eutyches.Spell.Utilities", "Eutyches.Spell.Utilities\Eutyches.Spell.Utilities.csproj", "{B832F952-C154-4F68-8BBD-DD720122684F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79675CD7-CBCF-4FE5-A054-E2168EAFE8D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79675CD7-CBCF-4FE5-A054-E2168EAFE8D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79675CD7-CBCF-4FE5-A054-E2168EAFE8D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79675CD7-CBCF-4FE5-A054-E2168EAFE8D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A88EE3F-BFAA-4FFB-BC11-8B9CC9A7BB23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A88EE3F-BFAA-4FFB-BC11-8B9CC9A7BB23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A88EE3F-BFAA-4FFB-BC11-8B9CC9A7BB23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A88EE3F-BFAA-4FFB-BC11-8B9CC9A7BB23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81A98690-64AD-4EA7-81F9-B2385C7FEE5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81A98690-64AD-4EA7-81F9-B2385C7FEE5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81A98690-64AD-4EA7-81F9-B2385C7FEE5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81A98690-64AD-4EA7-81F9-B2385C7FEE5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B832F952-C154-4F68-8BBD-DD720122684F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B832F952-C154-4F68-8BBD-DD720122684F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B832F952-C154-4F68-8BBD-DD720122684F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B832F952-C154-4F68-8BBD-DD720122684F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7607C958-37C9-4CCD-8DC7-11B17BCBCB50}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://eutyches.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Eutyches.Spell\\Eutyches.Spell.csproj
+		SccProjectName1 = Eutyches.Spell
+		SccLocalPath1 = Eutyches.Spell
+		SccProjectUniqueName2 = Eutyches.Spell.Hunspell\\Eutyches.Spell.Hunspell.csproj
+		SccProjectName2 = Eutyches.Spell.Hunspell
+		SccLocalPath2 = Eutyches.Spell.Hunspell
+		SccProjectUniqueName3 = Eutyches.Spell.Lexedit\\Eutyches.Spell.Lexedit.csproj
+		SccProjectName3 = Eutyches.Spell.Lexedit
+		SccLocalPath3 = Eutyches.Spell.Lexedit
+		SccProjectUniqueName4 = Eutyches.Spell.Utilities\\Eutyches.Spell.Utilities.csproj
+		SccProjectName4 = Eutyches.Spell.Utilities
+		SccLocalPath4 = Eutyches.Spell.Utilities
+	EndGlobalSection
+EndGlobal

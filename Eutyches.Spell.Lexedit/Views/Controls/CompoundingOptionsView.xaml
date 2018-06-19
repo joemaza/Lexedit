@@ -1,0 +1,163 @@
+﻿<UserControl
+    x:Class="Eutyches.Spell.Lexedit.Views.Controls.CompoundingOptionsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Eutyches.Spell.Lexedit.Views.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignWidth="300"
+    mc:Ignorable="d">
+    <GroupBox Header="Compounding Options">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <CheckBox
+                Grid.Row="0"
+                Grid.Column="0"
+                Content="Compound"
+                IsChecked="{Binding Path=IsCompoundFlagSet, UpdateSourceTrigger=PropertyChanged}"
+                IsEnabled="{Binding Path=IsCompoundFlagDefined}"
+                ToolTip="COMPOUNDFLAG" />
+
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="1"
+                FontFamily="Courier New"
+                Text="{Binding Path=CompoundFlagFlag, FallbackValue=[--], StringFormat='[{0}]', TargetNullValue='[--]'}" />
+
+            <CheckBox
+                Grid.Row="1"
+                Grid.Column="0"
+                Content="Only in Compound"
+                IsChecked="{Binding Path=IsOnlyInCompoundSet, UpdateSourceTrigger=PropertyChanged}"
+                IsEnabled="{Binding Path=IsOnlyInCompoundDefined}"
+                ToolTip="ONLYINCOMPOUND" />
+
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="1"
+                FontFamily="Courier New"
+                Text="{Binding Path=OnlyInCompoundFlag, FallbackValue=[--], StringFormat='[{0}]', TargetNullValue='[--]'}" />
+
+            <CheckBox
+                Grid.Row="2"
+                Grid.Column="0"
+                Content="Force Upper Case"
+                IsChecked="{Binding Path=IsForceUCaseSet, UpdateSourceTrigger=PropertyChanged}"
+                IsEnabled="{Binding Path=IsForceUCaseDefined}"
+                ToolTip="FORCEUCASE" />
+
+            <TextBlock
+                Grid.Row="2"
+                Grid.Column="1"
+                FontFamily="Courier New"
+                Text="{Binding Path=ForceUCaseFlag, FallbackValue=[--], StringFormat='[{0}]', TargetNullValue='[--]'}" />
+
+            <CheckBox
+                Grid.Row="3"
+                Grid.Column="0"
+                Content="First in Compounds"
+                IsChecked="{Binding Path=IsCompoundBeginSet, UpdateSourceTrigger=PropertyChanged}"
+                IsEnabled="{Binding Path=IsCompoundBeginDefined}"
+                ToolTip="COMPOUNDBEGIN" />
+            <TextBlock
+                Grid.Row="3"
+                Grid.Column="1"
+                FontFamily="Courier New"
+                Text="{Binding Path=CompoundBeginFlag, FallbackValue=[--], StringFormat='[{0}]', TargetNullValue='[--]'}" />
+
+            <CheckBox
+                Grid.Row="4"
+                Grid.Column="0"
+                Content="Middle in Compounds"
+                IsChecked="{Binding Path=IsCompoundMiddleSet, UpdateSourceTrigger=PropertyChanged}"
+                IsEnabled="{Binding Path=IsCompoundMiddleDefined}"
+                ToolTip="COMPOUNDMIDDLE" />
+            <TextBlock
+                Grid.Row="4"
+                Grid.Column="1"
+                FontFamily="Courier New"
+                Text="{Binding Path=CompoundMiddleFlag, FallbackValue=[--], StringFormat='[{0}]', TargetNullValue='[--]'}" />
+
+            <CheckBox
+                Grid.Row="5"
+                Grid.Column="0"
+                Content="Last in Compounds"
+                IsChecked="{Binding Path=IsCompoundLastSet, UpdateSourceTrigger=PropertyChanged}"
+                IsEnabled="{Binding Path=IsCompoundLastDefined}"
+                ToolTip="COMPOUNDLAST" />
+            <TextBlock
+                Grid.Row="5"
+                Grid.Column="1"
+                FontFamily="Courier New"
+                Text="{Binding Path=CompoundLastFlag, FallbackValue=[--], StringFormat='[{0}]', TargetNullValue='[--]'}" />
+
+            <CheckBox
+                Grid.Row="6"
+                Grid.Column="0"
+                Content="Permitted in Compounds"
+                IsChecked="{Binding Path=IsCompoundPermitFlagSet, UpdateSourceTrigger=PropertyChanged}"
+                IsEnabled="{Binding Path=IsCompoundPermitFlagDefined}"
+                ToolTip="COMPOUNDPERMITFLAG" />
+            <TextBlock
+                Grid.Row="6"
+                Grid.Column="1"
+                FontFamily="Courier New"
+                Text="{Binding Path=CompoundPermitFlagFlag, FallbackValue=[--], StringFormat='[{0}]', TargetNullValue='[--]'}" />
+
+            <CheckBox
+                Grid.Row="7"
+                Grid.Column="0"
+                Content="Forbidden in Compounds"
+                IsChecked="{Binding Path=IsCompoundForbidFlagSet, UpdateSourceTrigger=PropertyChanged}"
+                IsEnabled="{Binding Path=IsCompoundForbidFlagDefined}"
+                ToolTip="COMPOUNDFORBIDFLAG" />
+            <TextBlock
+                Grid.Row="7"
+                Grid.Column="1"
+                FontFamily="Courier New"
+                Text="{Binding Path=CompoundForbidFlagFlag, FallbackValue=[--], StringFormat='[{0}]', TargetNullValue='[--]'}" />
+
+            <CheckBox
+                Grid.Row="8"
+                Grid.Column="0"
+                Content="Mark as Root (Hungarian)"
+                IsChecked="{Binding Path=IsCompoundRootSet, UpdateSourceTrigger=PropertyChanged}"
+                IsEnabled="{Binding Path=IsCompoundRootDefined}"
+                ToolTip="COMPOUNDROOT" />
+            <TextBlock
+                Grid.Row="8"
+                Grid.Column="1"
+                FontFamily="Courier New"
+                Text="{Binding Path=CompoundRootFlag, FallbackValue=[--], StringFormat='[{0}]', TargetNullValue='[--]'}" />
+
+            <CheckBox
+                Grid.Row="9"
+                Grid.Column="0"
+                Content="Syllable Number (Hungarian)"
+                IsChecked="{Binding Path=IsSyllableNumSet, UpdateSourceTrigger=PropertyChanged}"
+                IsEnabled="{Binding Path=IsSyllableNumDefined}"
+                ToolTip="SYLLABLENUM" />
+            <TextBlock
+                Grid.Row="9"
+                Grid.Column="1"
+                FontFamily="Courier New"
+                Text="{Binding Path=SyllableNumFlag, FallbackValue=[--], StringFormat='[{0}]', TargetNullValue='[--]'}" />
+        </Grid>
+    </GroupBox>
+</UserControl>

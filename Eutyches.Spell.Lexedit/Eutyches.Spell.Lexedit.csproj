@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{81A98690-64AD-4EA7-81F9-B2385C7FEE5C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Eutyches.Spell.Lexedit</RootNamespace>
+    <AssemblyName>Eutyches.Spell.Lexedit</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Converters\FirstLetterConverter.cs" />
+    <Compile Include="Converters\HeaderConverter.cs" />
+    <Compile Include="Converters\ListToStringConverter.cs" />
+    <Compile Include="Converters\PercentageConverter.cs" />
+    <Compile Include="Converters\TitleConverter.cs" />
+    <Compile Include="Converters\UpperCaseConverter.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DialogService.cs" />
+    <Compile Include="Services\FileService.cs" />
+    <Compile Include="Services\Interfaces\IDialogService.cs" />
+    <Compile Include="Services\Interfaces\IFileService.cs" />
+    <Compile Include="Services\Interfaces\IToolService.cs" />
+    <Compile Include="Services\Models\AffixClipboardEvent.cs" />
+    <Compile Include="Services\Models\FileEvents.cs" />
+    <Compile Include="Services\Models\NavigationEvents.cs" />
+    <Compile Include="Services\ToolService.cs" />
+    <Compile Include="Services\ViewModels\StemRelationsViewModel.cs" />
+    <Compile Include="Services\Views\Controls\StemRelationsView.xaml.cs">
+      <DependentUpon>StemRelationsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Views\Controls\ImportErrorsView.xaml.cs">
+      <DependentUpon>ImportErrorsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Views\Controls\ImportSuccessView.xaml.cs">
+      <DependentUpon>ImportSuccessView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Views\Controls\ImportSummaryView.xaml.cs">
+      <DependentUpon>ImportSummaryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Views\Controls\ImportWarningsView.xaml.cs">
+      <DependentUpon>ImportWarningsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OKCancelButtonsView.xaml.cs">
+      <DependentUpon>OKCancelButtonsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SaveCancelButtons.xaml.cs">
+      <DependentUpon>SaveCancelButtons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Models\ErrorNotification.cs" />
+    <Compile Include="Services\Models\ExceptionNotification.cs" />
+    <Compile Include="Services\Models\FileDialogConfig.cs" />
+    <Compile Include="Services\Models\ImportData.cs" />
+    <Compile Include="Services\Models\ImportStatus.cs" />
+    <Compile Include="Services\Models\OperationConfirmation.cs" />
+    <Compile Include="Services\Models\OperationNotification.cs" />
+    <Compile Include="Services\ViewModels\ImportStemsViewModel.cs" />
+    <Compile Include="Services\ViewModels\ImportViewModelBase.cs" />
+    <Compile Include="Services\ViewModels\ToolViewModelBase.cs" />
+    <Compile Include="UserControls\SaveUndoButtonsView.xaml.cs">
+      <DependentUpon>SaveUndoButtonsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StemSummaryView.xaml.cs">
+      <DependentUpon>StemSummaryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\AffixMasterViewModel.cs" />
+    <Compile Include="ViewModels\Details\AffixDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Details\DetailsViewModelBase.cs" />
+    <Compile Include="ViewModels\Details\MorphemeDetailsViewModelBase.cs" />
+    <Compile Include="ViewModels\EditableViewModelBase.cs" />
+    <Compile Include="ViewModels\Details\RuleDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Details\StemDetailsViewModel.cs" />
+    <Compile Include="ViewModels\IEditableData.cs" />
+    <Compile Include="ViewModels\IHasChanges.cs" />
+    <Compile Include="ViewModels\MasterViewModelBase.cs" />
+    <Compile Include="ViewModels\Options\CompoundingOptionsViewModel.cs" />
+    <Compile Include="ViewModels\Options\ConversionOptionsViewModel.cs" />
+    <Compile Include="ViewModels\Options\FileMetaViewModel.cs" />
+    <Compile Include="ViewModels\Options\GeneralOptionsViewModel.cs" />
+    <Compile Include="ViewModels\Options\OptionsViewModelBase.cs" />
+    <Compile Include="ViewModels\Options\SuggestionOptionsViewModel.cs" />
+    <Compile Include="ViewModels\StemMasterViewModel.cs" />
+    <Compile Include="Views\AffixMasterView.xaml.cs">
+      <DependentUpon>AffixMasterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\CompoundingOptionsView.xaml.cs">
+      <DependentUpon>CompoundingOptionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\GeneralOptionsView.xaml.cs">
+      <DependentUpon>GeneralOptionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\StemAffixesView.xaml.cs">
+      <DependentUpon>StemAffixesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\StemInfoView.xaml.cs">
+      <DependentUpon>StemInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\SuggestionOptionsView.xaml.cs">
+      <DependentUpon>SuggestionOptionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Details\AffixDetailsView.xaml.cs">
+      <DependentUpon>AffixDetailsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Details\StemDetailsView.xaml.cs">
+      <DependentUpon>StemDetailsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StemMasterView.xaml.cs">
+      <DependentUpon>StemMasterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Views\Windows\StemRelationsToolWindow.xaml.cs">
+      <DependentUpon>StemRelationsToolWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Views\Windows\ImportAffixesWindow.xaml.cs">
+      <DependentUpon>ImportAffixesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Views\Windows\ImportStemsWindow.xaml.cs">
+      <DependentUpon>ImportStemsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Views\Windows\ToolWindowBase.cs" />
+    <Page Include="Converters\Converters.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Services\Views\Controls\StemRelationsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Services\Views\Controls\ImportErrorsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Services\Views\Controls\ImportSuccessView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Services\Views\Controls\ImportSummaryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Services\Views\Controls\ImportWarningsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\OKCancelButtonsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\SaveCancelButtons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AppStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\SaveUndoButtonsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\StemSummaryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AffixMasterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\CompoundingOptionsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\GeneralOptionsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\StemAffixesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\StemInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\SuggestionOptionsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Details\AffixDetailsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Details\StemDetailsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\StemMasterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Services\Views\Windows\StemRelationsToolWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Services\Views\Windows\ImportAffixesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Services\Views\Windows\ImportStemsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Diagrams\ViewModels.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>11.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="NHunspell">
+      <Version>1.2.5554.16953</Version>
+    </PackageReference>
+    <PackageReference Include="Ookii.Dialogs">
+      <Version>1.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Core">
+      <Version>7.1.0.135-pre</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Unity" Version="7.1.0.123-pre" />
+    <PackageReference Include="Prism.Wpf">
+      <Version>7.1.0.123-pre</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Eutyches.Spell.Hunspell\Eutyches.Spell.Hunspell.csproj">
+      <Project>{0A88EE3F-BFAA-4FFB-BC11-8B9CC9A7BB23}</Project>
+      <Name>Eutyches.Spell.Hunspell</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eutyches.Spell.Utilities\Eutyches.Spell.Utilities.csproj">
+      <Project>{b832f952-c154-4f68-8bbd-dd720122684f}</Project>
+      <Name>Eutyches.Spell.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eutyches.Spell\Eutyches.Spell.csproj">
+      <Project>{79675cd7-cbcf-4fe5-a054-e2168eafe8d1}</Project>
+      <Name>Eutyches.Spell</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\ToolWindows\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Save_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SaveAs_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NewFile_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\OpenFile_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CloseDocument_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ImportFile_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ExportData_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Export_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ExportFile_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InformationSymbol_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Import_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Exit_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\JSONFile_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Text_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ZipFile_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AddTextFile_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AddToCollection_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RemoveFromCollection_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RemoveFromDictionary_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AddDictionary_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AddItem_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\StatusInformation_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CreateListItem_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DeleteListItem_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Add_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Remove_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RemoveRow_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AddRow_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\StatusHelp_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Previous_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Next_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Undo_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Redo_16x.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
