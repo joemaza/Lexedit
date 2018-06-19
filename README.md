@@ -1,2 +1,2 @@
 # Lexedit
-App to maintain Hunspell spell-check dictionaries
+A Windows application for maintaining Hunspell spell-check dictionaries using MVVM (Prism v7.x).
