@@ -13,7 +13,7 @@ The current state of the code reflects my focus on properly associating stems (*
 # Background
 Years ago I was inspired to create a Hunspell dictionary for Iloko. As I started creating the dictionary, maintaining it became cumbersome. I looked for solutions and after trying some, I decided to create my own, not only for my use but to also make it more *accesible* for others who would like to assume the role of creating a spell-check for their language.
 
-The version of the code is the second iteration. I've decided to release this version to GitHub as I recode having decided to take a different approach. I am glad to have used MVVM principles since much of the XAML for the user interface does not need to be redone save for a few name changes to the data bindings. 
+The version of the code is the second iteration. I've decided to release this version to GitHub with the hopes of visibility and garnering interest.
 
 # Planned
 * Parse *.aff and *.dic files to create a lexicon
