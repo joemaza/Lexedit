@@ -11,6 +11,14 @@ Lexedit is an application to assist creators and maintainers of  Hunspell dictio
 * Import/Export stems and affixes in various formats: JSON, compressed file, (tagged) plain-text file
 
   Import or export stems and/or affixes for back up or sharing with a colleague.
+  
+* Morpheme Meta Data
+
+  Both stems and affixes have additional information, such as meaning or lexical categories (parts of speech), to make associations easier to understand for the user. This information can be included in the Hunspell files.
+
+* Stem Relations
+
+  Make relations between stems, for example, specify roots, irregular formations, derived formations and other formations that are not easily determined or specified by affixation.
 
 * *Ad Hoc* Validation
 
