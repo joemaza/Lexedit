@@ -1,6 +1,8 @@
 # Lexedit
 Lexedit is an application to assist creators and maintainers of  Hunspell dictionaries.
 
+![Main Window](https://github.com/joemaza/Lexedit/blob/master/Images/MainWindow.png "Lexedit Main Window")
+
 # Features
 
 ## Current or in Development
