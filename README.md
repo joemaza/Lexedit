@@ -28,7 +28,7 @@ Lexedit is an application to assist creators and maintainers of  Hunspell dictio
 * Creation of Web browser or productivity suite extensions, such as Firefox spelling dictionaries or LibreOffice extensions
 
 # Background
-Years ago I was inspired to create a Hunspell dictionary for Iloko. As I started creating the dictionary, maintaining it became cumbersome due to the morphology of Iloko. I looked for solutions. After finding some and trying them, I decided to create my own. The goal was not only for my own use but to also make it more *accessible* for others who would want to creat a spell-check dictionary for their language.
+Years ago I was inspired to create a Hunspell dictionary for Iloko. As I started creating the dictionary, maintaining it became cumbersome. I looked for solutions. After finding some and trying them, I decided to create a tool that better suited my needs and my style of work. The goal was not only for my own use but to also make it more *accessible* for others who would want to creat a spell-check dictionary for their language.
 
 The version of the code is the second iteration. I've decided to release this version to GitHub with the hopes of visibility and garnering interest as I reimplement my vision based on what I had learned from the previous iteration.
 
